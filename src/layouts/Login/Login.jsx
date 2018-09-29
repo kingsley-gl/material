@@ -61,7 +61,7 @@ class SignIn extends React.Component{
         axios.get('http://localhost:8001').then(function (response) {
             console.log(response);
         })
-        // this.props.history.push('/system/dashboard')
+        this.props.history.push('/system/dashboard')
     }
 
     render () {
@@ -77,7 +77,7 @@ class SignIn extends React.Component{
                         </Avatar>
                         <Typography variant="headline">{this.state.signIn}</Typography>
                             <form className={classes.form} 
-                            // onSubmit={this.handleSubmit}
+                            onSubmit={this.handleSubmit}
                             >
                                 <FormControl margin="normal" required fullWidth>
                                 <InputLabel htmlFor="email">{this.state.address}</InputLabel>
@@ -93,13 +93,13 @@ class SignIn extends React.Component{
                                 />
                                 </FormControl>
                                 <Button
-                                // type="submit"
-                                type="button"
+                                type="submit"
+                                // type="button"
                                 fullWidth
                                 variant="raised"
                                 color="primary"
                                 className={classes.submit}
-                                onClick={this.handleSubmit}
+                                // onClick={this.handleSubmit}
                                 >
                                 {this.state.signIn}
                                 </Button>
