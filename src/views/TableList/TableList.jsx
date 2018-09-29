@@ -51,14 +51,17 @@ const styles = theme => ({
   formItem:{
     width: theme.spacing.unit * 50,
     margin: theme.spacing.unit,
+
   },
   formButton:{
-    width: theme.spacing.unit ,
+    // width: theme.spacing.unit ,
+    marginTop: 20,
   },
   textField:{
-
-  }
-
+    fontWeight: "300",
+    fontFamily:"'SimSun', sans-serif",
+    textStyle:'BOLD'
+  },
 });
 
 class TableList extends React.Component {
@@ -83,6 +86,7 @@ class TableList extends React.Component {
             <form className={classes.formLayout}>
               <FormControl className={classes.formItem} margin="normal" xs={12} sm={6}>
                 <TextField
+                  className={classes.textField}
                   id="filled-name"
                   label="姓名"
                   value={this.state.name}
@@ -119,7 +123,7 @@ class TableList extends React.Component {
               // type="button"
               variant="raised"
               color="primary"
-              // className={classes.submit}
+              className={classes.formButton}
               // onClick={this.handleSubmit}
               >
               提交
