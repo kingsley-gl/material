@@ -44,16 +44,20 @@ const styles = theme => ({
   formLayout:{
     display: 'flex',
     flexWrap: 'wrap',
-    flexDirection: 'row wrap',
+    flexDirection: 'column',
+    justifyContent: 'center',
     margin: theme.spacing.unit * 5,
   },
   formItem:{
     width: theme.spacing.unit * 50,
-    margin: theme.spacing.unit * 10,
+    margin: theme.spacing.unit,
   },
   formButton:{
     width: theme.spacing.unit ,
   },
+  textField:{
+
+  }
 
 });
 
@@ -99,7 +103,7 @@ class TableList extends React.Component {
                   required 
                 />
               </FormControl>
-              <FormControl style={{width: 1000, margin:80}} margin="normal" required fullWidth>
+              <FormControl style={{width: 1000, margin:8}} margin="normal" required fullWidth>
                 <TextField
                   id="filled-addr"
                   label="地址"
